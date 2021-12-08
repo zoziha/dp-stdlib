@@ -1,6 +1,7 @@
 # dp-stdlib
 
-`dp-stdlib` is a downstream branch of Fortran standard library and a fpm package, using `real(real64)` 
+`dp-stdlib` is a downstream branch of [Fortran standard library](https://github.com/fortran-lang/stdlib) 
+and a [fpm](https://github.com/fortran-lang/fpm) package, using `real(real64)` 
 and `integer(int32`, adapts to the lightweight compilation pressure.
 
 ## Build with Fortran-lang/fpm
