@@ -9,8 +9,7 @@ Fortran Package Manager (FPM) is a package manager and build system for Fortran.
 You can build `dp-stdlib` using the provided `fpm.toml`:
 
 ```sh
-fpm build
-fpm run --example --list
+fpm build --profile release
 ```
 
 To use `dp-stdlib` within your `fpm` project, add the following lines to your `fpm.toml` file:
