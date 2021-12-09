@@ -20,6 +20,7 @@ module stdlib_random
     !! ([Specification](../page/specs/stdlib_random.html#
     !! dist_rand-get-a-random-integer-with-specified-kind))
         module procedure dist_rand_iint32
+        module procedure dist_rand_iint64
     end interface dist_rand
 
     interface random_seed
@@ -51,6 +52,13 @@ module stdlib_random
         res = shiftr(xoshiro256ss( ), k)
     end function dist_rand_iint32
 
+    
+    function dist_rand_iint64(n) result(res)
+        integer(int64), intent(in) :: n
+        integer(int64) :: res
+        
+        res = shiftr(xoshiro256ss( ), 0)
+    end function dist_rand_iint64
 
     function xoshiro256ss( ) result (res)
     ! Generate random 64-bit integers
@@ -112,7 +120,12 @@ module stdlib_random
     ! Values are converted from C unsigned integer of 0x9e3779b97f4a7c15,
     ! 0xbf58476d1ce4e5b9, 0x94d049bb133111eb
 
-        res = optval(s, si)
+        if (present(s)) then
+            res = s
+        else
+            res = si
+        end if
+        
         si = res + int01
         res = ieor(res, shiftr(res, 30)) * int02
         res = ieor(res, shiftr(res, 27)) * int03

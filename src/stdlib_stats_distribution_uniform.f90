@@ -23,7 +23,7 @@ module stdlib_stats_distribution_uniform
     !! ([Specification](../page/specs/stdlib_stats_distribution_uniform.html#
     !! rvs_uniform-uniform-distribution-random-variates))
 
-        module procedure rvs_unif_0_rsp                 ! 0 dummy variable
+        module procedure rvs_unif_0_rdp  ! 0 dummy variable
 
         module procedure rvs_unif_1_iint32     ! 1 dummy variable
         module procedure rvs_unif_1_rdp     ! 1 dummy variable
