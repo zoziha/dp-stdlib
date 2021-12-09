@@ -20,6 +20,13 @@ To use `dp-stdlib` within your `fpm` project, add the following lines to your `f
 dp-stdlib = { git="https://github.com/zoziha/dp-stdlib" }
 ```
 
+## How to contribute
+
+```sh
+git checkout ci
+# and edit the CI, source files
+```
+
 ## Links
 
 - [fortran-lang website](https://fortran-lang.org/)
