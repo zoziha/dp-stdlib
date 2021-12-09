@@ -9,7 +9,7 @@ and `integer(int32)`, adapts to the lightweight compilation pressure.
 
 ## Build with Fortran-lang/fpm
 
-Fortran Package Manager (FPM) is a package manager and build system for Fortran. <br>
+Fortran Package Manager (fpm) is a package manager and build system for Fortran. <br>
 You can build `dp-stdlib` using the provided `fpm.toml`:
 
 ```sh
